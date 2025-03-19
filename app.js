@@ -32,6 +32,10 @@ function search(event) {
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInputElement.value}&key=${apiKey}&units=metric`;
     let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${searchInputElement.value}&key=${apiKey}&units=metric`
     
+    let currentDateELement = document.querySelector("#current-date");
+    let currentDate = new Date();
+    currentDateELement.innerHTML = formatDate(currentDate);
+
     axios.get(apiUrl).then(display);
     axios.get(forecastUrl).then(displayForecast);
 }
