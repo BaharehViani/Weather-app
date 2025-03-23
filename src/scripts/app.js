@@ -95,7 +95,7 @@ let currentDate = new Date();
 currentDateELement.innerHTML = formatDate(currentDate);
   
 let apiKey = "4bada4e2ef8cba4745bcdtf450236obd";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=barcelona&key=${apiKey}&units=metric`;
-let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=barcelona&key=${apiKey}&units=metric`
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=london&key=${apiKey}&units=metric`;
+let forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=london&key=${apiKey}&units=metric`
 axios.get(apiUrl).then(display);
 axios.get(forecastUrl).then(displayForecast);
